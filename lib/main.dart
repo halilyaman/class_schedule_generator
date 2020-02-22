@@ -6,7 +6,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Schedular',
+      title: 'Schedule Generator',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
@@ -25,6 +25,8 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      body: Center(),
+    );
   }
 }
