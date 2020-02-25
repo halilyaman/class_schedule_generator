@@ -1,5 +1,4 @@
-import 'package:class_schedule_generator/models/curriculums_model.dart';
-import 'package:class_schedule_generator/pages/course_lists_page.dart';
+import 'package:class_schedule_generator/models/course_structure_model.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -7,7 +6,7 @@ class MainMenu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Consumer<CurriculumsModel>(
+      body: Consumer<CourseStructureModel>(
         builder:(context, courseLists, child) => Container(
           color: Colors.blueGrey,
           child: Center(
@@ -17,12 +16,11 @@ class MainMenu extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: GestureDetector(
-                      onTap: () => {
+                      onTap: () => 
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => CourseListsPage()))
-                          },
+                                    builder: (context) => null)),
                       child: Container(
                         width: 300.0,
                         height: 100.0,
@@ -32,7 +30,7 @@ class MainMenu extends StatelessWidget {
                         ),
                         child: Center(
                             child: const Text(
-                          "Course Lists",
+                          "Course Structures",
                           style: TextStyle(
                               color: Colors.white,
                               fontSize: 24.0,
@@ -82,29 +80,6 @@ class MainMenu extends StatelessWidget {
                         )),
                       )),
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(top: 100.0),
-                  child: GestureDetector(
-                    onTap: () => {},
-                    child: Container(
-                      width: 300.0,
-                      height: 100.0,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(20.0),
-                        color: Colors.black,
-                      ),
-                      child: Center(
-                        child: const Text(
-                          "Generate Schedule",
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 24.0,
-                              fontWeight: FontWeight.bold),
-                        ),
-                      ),
-                    ),
-                  ),
-                )
               ],
             ),
           ),
