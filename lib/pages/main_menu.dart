@@ -1,4 +1,5 @@
 import 'package:class_schedule_generator/models/course_structure_model.dart';
+import 'package:class_schedule_generator/pages/course_structure_page.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -20,7 +21,7 @@ class MainMenu extends StatelessWidget {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => null)),
+                                    builder: (context) => CourseStructurePage())),
                       child: Container(
                         width: 300.0,
                         height: 100.0,
